@@ -1,0 +1,10 @@
+{
+  "name": "array-splice",
+  "version": "1.0.0",
+  "author": "Michael Rhodes",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "test": "node test.js"
+  }
+}

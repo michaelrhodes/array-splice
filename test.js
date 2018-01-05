@@ -1,0 +1,13 @@
+var assert = require('assert')
+var splice = require('./index')
+
+assert.deepEqual(splice([1,2,3]), [1,2,3])
+assert.deepEqual(splice([1,2,3], [1,3]), [2])
+assert.deepEqual(splice([1,2,3], [1,3], [4]), [4,2])
+assert.deepEqual(splice([1,2,3], [1,3], [4,5]), [4,2,5])
+assert.deepEqual(splice([1,2,3], [1,3], [4,5,6]), [4,2,5])
+assert.deepEqual(splice([1,2,3], [4,5,6]), [1,2,3])
+assert.deepEqual(splice([1,2,3], 1), [2,3])
+assert.deepEqual(splice([1,2,3], 1, 4), [4,2,3])
+assert.deepEqual(splice([0,false,null], null), [0,false])
+assert.deepEqual(splice([0,false,null], null, void 0), [0,false])
